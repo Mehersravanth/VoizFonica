@@ -1,0 +1,32 @@
+server:
+  port: 8999
+
+eureka:
+  instance:
+    hostname: localhost
+    
+spring:
+  application: 
+    name: api-gateway    
+  cloud:
+    gateway:
+      routes:
+        - id: login
+          uri: lb://login
+          predicates:
+            - Path=/regs/**
+        - id: contact
+          uri: lb://contact
+          predicates:
+            - Path=/contact/**
+        - id: invoice
+          uri: lb://invoice
+          predicates:
+            - Path=/invoice/**
+        - id: payment
+          uri: lb://payment
+          predicates:
+            - Path=/payment/**  
+       
+               
+          
