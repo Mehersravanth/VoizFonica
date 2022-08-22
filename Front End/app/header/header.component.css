@@ -1,0 +1,106 @@
+ul {
+
+
+
+  list-style-type: none;
+
+
+
+  margin: 0;
+
+
+
+  padding: 0;
+
+
+
+  overflow: hidden;
+
+
+
+  background-color:#073e4b;
+
+
+
+}
+
+
+
+
+
+
+li {
+
+
+
+  float:right;
+
+
+
+}
+
+
+
+
+
+li a {
+
+
+
+  display: block;
+
+
+
+  color: white;
+
+font-size: 19px;
+font-weight: bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  text-align: center;
+
+
+
+  padding: 14px 16px;
+
+
+
+  text-decoration: none;
+
+
+
+}
+
+
+
+
+
+li a:hover:not(.active) {
+
+
+
+  background-color: orangered;
+
+
+
+}
+
+
+
+
+
+.active {
+
+
+
+  background-color: #073e4b;
+
+
+
+}
+.logoutLblPos{
+
+  position:fixed;
+  right:10px;
+  top:5px;
+}

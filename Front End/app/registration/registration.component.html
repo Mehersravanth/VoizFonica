@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sign Up Form by VoizFonica</title>
+
+    <link rel="stylesheet" href="./registration.component.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+
+                    <form [formGroup]="form" (ngSubmit)="registration()" id="signup-form" class="signup-form">
+                      <div class="transbox">
+
+                        <p style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            &nbsp;&nbsp;CREATE ACCOUNT</p>
+                            </div>
+                        <!-- <h2 class="form-title">Create account</h2> -->
+
+                        <div class="form-group">
+
+                            <input formControlName="name" type="text" class="form-input" id="name"
+                                placeholder="Enter Name" required>
+                                <div
+
+                                *ngIf="!name?.valid && (name?.dirty ||name?.touched)">
+                        
+                                <div [hidden]="!name.errors.required">
+                        
+                                   Name is required
+                        
+                                </div>
+                        
+                                <div [hidden]="!name.errors.minlength">
+                        
+                                  Min Length is 10
+                        
+                                </div>
+                        
+                              </div>    
+                        </div>
+
+                        <div class="form-group">
+
+                            <input formControlName="email" type="email" class="form-input" id="email"
+                                placeholder="Enter Email" required>
+                                <div
+
+                                *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
+                        
+                                <div [hidden]="!email.errors.required">
+                        
+                                   Email is required
+                        
+                                </div>
+                        
+                                <div [hidden]="!email.errors.minlength">
+                        
+                                  Min Length is 5
+                        
+                                </div>
+                        
+                              </div>    
+                        </div>
+
+                        <div class="form-group">
+
+                            <input formControlName="password" type="password" class="form-input" name="password"
+                                id="password" placeholder="Enter Password" required>
+                                <div
+
+                                *ngIf="!password?.valid && (password?.dirty ||password?.touched)">
+                        
+                                <div [hidden]="!password.errors.required">
+                        
+                                   Password is required
+                        
+                                </div>
+                        
+                                <div [hidden]="!password.errors.minlength">
+                        
+                                  Min Length is 5
+                        
+                                </div>
+                        
+                              </div>    
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+
+                        </div>
+                        <div class="form-group">
+
+                            <input   formControlName="phnNumber" type="text" class="form-input" name="phnNumber"
+                                id="phnNumber" placeholder="Enter Phone Number" required>
+                                <div
+
+                                *ngIf="!phnNumber?.valid && (phnNumber?.dirty ||phnNumber?.touched)">
+                        
+                                <div [hidden]="!phnNumber.errors.required">
+                        
+                                   Phone Number is required
+                        
+                                </div>
+                        
+                                <div [hidden]="!phnNumber.errors.minlength">
+                        
+                                  Min Length is 10
+                        
+                                </div>
+                        
+                              </div>
+                            <!-- <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span> -->
+
+                        </div>
+                        <div class="form-group">
+
+                            <input formControlName="re_password" type="password" class="form-input" name="re_password"
+                                id="re_password" placeholder="Repeat Password" required>
+                                <div
+
+                                *ngIf="!name?.valid && (name?.dirty ||name?.touched)">
+                        
+                                <div [hidden]="!name.errors.required">
+                        
+                                   Repeat Password is required
+                        
+                                </div>
+                        
+                                <div [hidden]="!name.errors.minlength">
+                        
+                                  Min Length is 5
+                        
+                                </div>
+                        
+                              </div>    
+                                <span toggle="#re_password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+
+                            <!-- <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                statements in <a href="#" class="term-service">Terms of service</a></label> -->
+
+                        </div>
+
+                        <div class="form-submit">
+
+                            <button type="submit" class="btn btn-primary"  [disabled]="!form.valid">Register!</button>
+
+                        </div>
+
+                    </form>
+
+                    <p class="loginhere">
+
+                        Have already an account ? <a href="/login" class="loginhere-link">Login here</a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </div>
+    
+
+
+
+</body>
+
+</html>

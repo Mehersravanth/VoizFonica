@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 420px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .intro h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: rgb(34, 44, 55);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .intro p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(24, 31, 39);
+    text-transform: uppercase;
+    margin: 20px 0;
+    
+    
+   
+  }
+
+  .intro button {
+    background-color:#073e4b;
+    color:white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+  div.background {
+    
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+  }
+  
+  div.transbox {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 25px;
+  }
+  .achievements
+  {
+    
+
+   display: flex;
+   background-repeat: no-repeat;
+   background-size: cover;
+     
+   justify-content: space-around;
+   align-items: center;
+   padding: 40px 80px;
+ }
+
+ .achievements .work {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   padding: 0 40px;
+ }
+
+ .achievements .work i {
+   width: fit-content;
+   font-size: 50px;
+   color:white;
+   border-radius: 50%;
+   background-color: #073e4b;
+   border: 2px solid #333333;
+   padding: 12px;
+ }
+
+ .achievements .work .work-heading {
+   font-size: 20px;
+   color: #073e4b;
+   text-transform: uppercase;
+   margin: 10px 0;
+ }
+
+ .achievements .work .work-text {
+   font-size: 20px;
+   color:black;
+   margin: 10px 0;
+ }
+ .input-box{
+   text-align: center;
+   
+ }

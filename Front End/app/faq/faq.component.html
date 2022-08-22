@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+  <style media="screen">
+
+.accordions {
+width: 80%;
+margin: 100px auto;
+}
+
+.accordions h3 {
+text-align: center;
+font-family: "Roboto", sans-serif;
+font-weight: bold;
+}
+
+.accordion-item {
+ font-size: 20px;
+background-color: #073e4b;
+margin-bottom: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border: 1px solid #100e34;
+border-radius: 5px;
+color: #ffffff;
+
+}
+
+.accordion-item .accordion-title {
+cursor: pointer;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+padding: 20px;
+transition: transform 0.4s ease-in-out;
+}
+
+.accordion-item .accordion-title.active-title {
+background-color: #100e34;
+color: #ffffff;
+}
+
+.accordion-item .accordion-title h3 {
+font-weight: 700;
+margin: 0;
+font-size: 18px;
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down {
+transform: rotate(0);
+transition: 0.4s;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+transform: rotate(-180deg);
+color: #fa5019;
+}
+
+.accordion-item .accordion-content {
+display: none;
+line-height: 1.7;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 0 0 5px 5px;
+color: #100e34;
+}
+
+.accordion-item .accordion-content.active {
+display: block;
+}
+
+.accordion-item .accordion-content p {
+margin: 0;
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+}
+
+.details {
+background: #dce1f2;
+}
+
+.details .detailed_info {
+margin: 50px auto;
+}
+
+.details img {
+margin: 0 auto;
+display: block;
+/* margin-top: 120px; */
+}
+
+.details h3 {
+font-family: "Poppins", sans-serif;
+font-weight: bold;
+font-size: 20px;
+}
+
+.details p {
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+line-height: 1.5em;
+}
+
+.details ul li {
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+line-height: 1.7em;
+}
+
+  </style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <section id="faq">
+    <div class="container faq">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="accordions">
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item1">
+                  <h3>Why VoizFonica? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <!-- <div class="accordion-content" id="item1"> -->
+                  <p style="text-align:center;">
+                    VoizFonica business is very technology dependent as company acts as a network service provider(NSP) in mobile.
+                    Problem Handling processes are responsible for receiving trouble reports from customers, resolving them to the customer's satisfaction and<br>
+                    providing meaningful status on repair activity to the customer.
+                  </p>
+                <!-- </div> -->
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item2">
+                  <h3>What are the benefits of 209/- plan? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <!-- <div class="accordion-content" id="item2"> -->
+                  <p style="text-align: center;">
+                   You will get 1.5Gb/day for 28days and you can enjoy unlimited calls and messages
+                  </p>
+                <!-- </div> -->
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item3">
+                  <h3>Payment Options <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <!-- <div class="accordion-content" id="item3"> -->
+                  <p style="text-align:center ;">
+                    You can pay with your credit card or Paypal.In the coming days we'll add more payment options like UPI etc..
+                  </p>
+                <!-- </div> -->
+              </div>
+
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(".accordion-title").click(function (e) {
+      var accordionitem = $(this).attr("data-tab");
+      $("#" + accordionitem)
+        .slideToggle()
+        .parent()
+        .siblings()
+        .find(".accordion-content")
+        .slideUp();
+
+      $(this).toggleClass("active-title");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title")
+        .removeClass("active-title");
+
+      $("i.fa-chevron-down", this).toggleClass("chevron-top");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title i.fa-chevron-down")
+        .removeClass("chevron-top");
+    });
+  });
+
+  </script>
+</body>
+</html>
